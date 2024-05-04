@@ -15,7 +15,7 @@ const SetupPasscodeScreen = ({ navigation, route }) => {
         address: route.params.address,
         passcode: passcode,
       };
-      console.log("Saving user data:", userData); // Add this line
+      console.log("Saving user data:", userData); 
       // Store user data in AsyncStorage
       await AsyncStorage.setItem('userData', JSON.stringify(userData));
       navigation.navigate('Home', userData);

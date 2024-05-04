@@ -8,10 +8,10 @@ const LoginScreen = ({ navigation }) => {
 
   const handleLogin = async () => {
     const storedUserDataString = await AsyncStorage.getItem('userData');
-    console.log("Stored user data:", storedUserDataString); // Add this line
+    console.log("Stored user data:", storedUserDataString); 
     if (storedUserDataString) {
       const storedUserData = JSON.parse(storedUserDataString);
-      console.log("Input data:", phoneNumber, passcode); // Add this line
+      console.log("Input data:", phoneNumber, passcode); 
       if (
         storedUserData.phoneNumber === phoneNumber &&
         storedUserData.passcode === passcode
